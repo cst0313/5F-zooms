@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getDateTime() {
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + ' ' + time;
+            return DateTime;
+        }
+        //document.getElementById("currentDateTime").value = dateTime;
+        function Click() {
+            var today = new Date();
+            var date = (today.getMonth() + 1) + '-' + today.getDate();
+            if (today.getMinutes() <= 9) {
+                var time = today.getHours() + ":0" + today.getMinutes();
+            } else {
+                var time = today.getHours() + ":" + today.getMinutes();
+            }
+            var physics = "https://zoom.us/j/2554856308?pwd=Um1qM212S2xNNXdGWmNZWlA2anM3QT09";
+            var maths = "https://zoom.us/j/6925806876?pwd=NExkYXVmNDliYjNNSk9vaGFYMGxHdz09";
+            var chem = "https://zoom.us/j/5462032609?pwd=RkhBMGNsQ05xSytaT1FMY0EyWEpkUT09";
+            var link = "#";//should init to drive
+            var bre = "https://flappybird.io/"
+            var drive = "https://hiiiiiiiiiiiiiiiiiiiii.on.drv.tw/class_webpagev2/";
+            var fin="www.google.com"
+            if (date == "3-16") {
+                alert("Lessons are up for today! Come back tomorrow~");
+                link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+            if (date == "3-17") {
+                if (time >= "7:40" && time < "8:00") {
+                    link = maths;
+                }
+                if (time >= "8:20" && time < "8:35") {
+                    link = physics;
+                }
+                if (time >= "9:25" && time < "9:55") {
+                    link = physics;
+                }
+                if (time >= "10:10" && time < "10:20") {
+                    link = drive;
+                }
+                if (time >= "11:15" && time <= "12:15") {
+                    link = bre;
+                }
+                if (time >= "12:25" && time <= "12:50") {
+                    link = maths;
+                }
+            }
+            if(date=="3-18" || date=="3-19" || date=="3-20"){
+                alert("Special holiday today yay");
+                link="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+            if (date == "3-21") {
+                if (time >= "8:15" && time < "8:35") {
+                    link = math;
+                }
+                if (time >= "9:25" && time < "9:35") {
+                    link = bre;
+                }
+                if (time >= "9:35" && time < "9:55") {
+                    link = drive;
+                }
+                if (time >= "11:15" && time < "11:25") {
+                    link = bre;
+                }
+                if (time >= "11:25" && time < "11:45") {
+                    link = chem;
+                }
+            }
+            if(date=="3-22"){
+             if(time>="8:15" && time<"9:00"){
+               link=math;
+             }
+             if(time>="9:00" && time<"9:30"){
+               link=bre;
+             }
+             if(time>="9:35" && time<"9:59"){
+               link=math;
+             }
+             if(time>="10:00" && time<"10:35"){
+               link=math;
+             }
+             if(time>="10:35" && time<"10:59"){
+               link=chem;
+             }
+             if(time>="11:25" && time<"11:45"){
+               link=bre;
+             }
+             if(time>="12:00" && time<"12:59"){
+               link=physics;
+             }
+             if(time>="13:06" && time<"23:59"){                                   
+               link=fin;
+             }
+            }
+            if(link==fin){
+                alert("Lessons are finished for today! Come back tomorrow");
+            }else if(link =="#"){//initial link
+                alert("Hmm, seems like Jeffrey didn't write anything for this time frame. Nice try.");
+                link="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }else if (link == drive) {
+                alert("It is FM/BIO, please click your class's button after page reload(since I cannot tell which class you are in)");
+            } else if (link == bre) {
+                alert("hmmm.... I don't think there are any immediate lessons, or you are too early. Take a break but remember to come back later!");
+            } else{
+                if (link == maths) {
+                    alert("you are about to enter maths");
+                }
+                if (link == chem) {
+                    alert("you are about to enter chemistry");
+                }
+                if (link == physics) {
+                    alert("you are about to enter physics");
+                }
+            }
+            document.getElementById('hyperlink').setAttribute("href", link);
+            document.getElementById('hyperlink').innerHTML = link;
+        }
+        function OnSubmitForm() {
+            alert("You will now enter");
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3>
+        Hi! This is the link for the 5F zooms: I've decided one link is best since people (including me) are too lazy to
+        search for the links in the schedule :)
+    </h3>
+    <button onclick="getElementById('demo').innerHTML=Date()">Click me for the current time!</button>
+    <p id="demo"></p>
+    <br>
+    <a id="hyperlink" href="#" onClick="Click()" class="button">Click here to enter classroom directly</a>
+    <div>
+        <label>
+            Or choose a particular classroom:</label><br>
+        <button onclick="window.location.href = 'https://zoom.us/j/6925806876?pwd=NExkYXVmNDliYjNNSk9vaGFYMGxHdz09'">
+            Math/FM </button><br>
+        <button onclick="window.location.href = 'https://zoom.us/j/5462032609?pwd=RkhBMGNsQ05xSytaT1FMY0EyWEpkUT09'">
+            Chemistry </button><br>
+        <button onclick="window.location.href = 'https://zoom.us/j/2554856308?pwd=Um1qM212S2xNNXdGWmNZWlA2anM3QT09'">
+            Physics </button><br>
+        <button onclick="window.location.href = 'https://zoom.us/j/7145747220?pwd=dVVQVVY5dWhDdFJLdWlQRTNoWUZrUT09'">
+            Bio </button><br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">How did you even find this uwu</a>
+</body>
+
+</html>
