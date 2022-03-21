@@ -96,7 +96,8 @@
         </div>
         <a href="https://zoom.us/j/5462032609?pwd=RkhBMGNsQ05xSytaT1FMY0EyWEpkUT09" class="u-border-none u-btn u-btn-round u-button-style u-grey-75 u-hover-grey-70 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-4" target="_blank">CHEMISTRY </a>
         <div class="u-clearfix u-custom-html u-white u-custom-html-1">
-          <script> function Click() {
+          <script>
+	function Click() {
             var today = new Date();
             var date = (today.getMonth() + 1) + '-' + today.getDate();
             if (today.getMinutes() <= 9) {
@@ -105,7 +106,7 @@
                 var time = today.getHours() + ":" + today.getMinutes();
             }
             var physics = "https://zoom.us/j/2554856308?pwd=Um1qM212S2xNNXdGWmNZWlA2anM3QT09";
-            var maths = "https://zoom.us/j/6925806876?pwd=NExkYXVmNDliYjNNSk9vaGFYMGxHdz09";
+            var math = "https://zoom.us/j/6925806876?pwd=NExkYXVmNDliYjNNSk9vaGFYMGxHdz09";
             var chem = "https://zoom.us/j/5462032609?pwd=RkhBMGNsQ05xSytaT1FMY0EyWEpkUT09";
             var link = "#";//should init to drive
             var bre = "https://flappybird.io/"
@@ -117,7 +118,7 @@
             }
             if (date == "3-17") {
                 if (time >= "7:40" && time < "8:00") {
-                    link = maths;
+                    link = math;
                 }
                 if (time >= "8:20" && time < "8:35") {
                     link = physics;
@@ -132,7 +133,7 @@
                     link = bre;
                 }
                 if (time >= "12:25" && time <= "12:50") {
-                    link = maths;
+                    link = math;
                 }
             }
             if (date == "3-18" || date == "3-19" || date == "3-20") {
@@ -192,7 +193,7 @@
             } else if (link == bre) {
                 alert("hmmm.... I don't think there are any immediate lessons, or you are too early. Take a break but remember to come back later!");
             } else {
-                if (link == maths) {
+                if (link == math) {
                     alert("you are about to enter maths");
                 }
                 if (link == chem) {
@@ -203,9 +204,10 @@
                 }
             }
             document.getElementById('hyperlink').setAttribute("href", link);
-            document.getElementById('hyperlink').innerHTML = "SMART ENTER"
-        } </script>
-          <a id="hyperlink" href="#" onClick="Click()" class="button">SMART ENTER</a>
+            document.getElementById('hyperlink').innerHTML = link
+        }
+	</script>
+	<a id="hyperlink" href="#" onclick="Click()" class="button">SMART ENTER</a>
         </div>
         <div class="u-container-style u-group u-group-2">
           <div class="u-container-layout">
