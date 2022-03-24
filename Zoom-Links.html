@@ -243,7 +243,7 @@
                             if (time >= "9:35" && time < "9:59") {
                                 link = physics;
                             }
-                            if ((time >= "10:40" && time <= "10:59") || (time>="11:00" && time<="11:15") ){
+                            if ((time >= "10:40" && time <= "10:59") || (time >= "11:00" && time <= "11:15")) {
                                 link = bre;
                             }
                             if (time > "11:15" && time < "11:59") {
@@ -253,9 +253,38 @@
                                 link = fin;
                             }
                         }
+                        if (date == "3-24") {
+                            if (time >= "8:40" && time < "8:59") {
+                                link = physics;
+                            }
+                            if (time >= "9:00" && time < "9:20") {
+                                link = physics;
+                            }
+                            if (time >= "9:20" && time < "9:34") {
+                                link = bre;
+                            }
+                            if (time >= "9:35" && time < "9:59") {
+                                link = physics;
+                            }
+                            if (time >= "10:10" && time < "10:59") {
+                                link = bio;
+                            }
+                            if (time >= "11:00" && time < "11:59") {
+                                link = bre;
+                            }
+                            if (time >= "12:00" && time < "12:10") {
+                                link = bre;
+                            }
+                            if (time >= "12:10" && time < "12:59") {
+                                link = math;
+                            }
+                            if (time >= "13:00" && time < "23:59") {
+                                link = fin;
+                            }
+                        }
                         if (link == fin) {
                             alert("Lessons are finished for today! Come back tomorrow");
-			    link = drive;
+                            link = drive;
                         } else if (link == "#") {//initial link
                             alert("Hmm, seems like Jeffrey didn't write anything for this time frame. Nice try.");
                             link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
@@ -272,6 +301,9 @@
                             }
                             if (link == physics) {
                                 alert("you are about to enter physics");
+                            }
+                            if (link == bio) {
+                                alert("You are about to enter bio (Note there are no FM for FM ppl)");
                             }
                         }
                         document.getElementById('hyperlink').setAttribute("href", link);
