@@ -283,12 +283,20 @@
                                 link = fin;
                             }
                         }
+			if (date=="3-25"){
+				if(time>= "12:00" and time <="12:59"){
+					link = chem;
+				}
+				if (time >= "13:00" && time < "23:59") {
+                                	link = fin;
+                            	}
+			}
                         if (link == fin) {
                             alert("Lessons are finished for today! Come back tomorrow");
                             link = drive;
                         } else if (link == "#") {//initial link
-                            alert("Hmm, seems like Jeffrey didn't write anything for this time frame. Nice try.");
-                            link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                            alert("Hmm, seems like Jeffrey didn't write anything for this time frame. Take a break.");
+                            link = "https://cst0313.github.io/5F-zooms/Zoom-Links.html";
                         } else if (link == drive) {
                             alert("It is FM/BIO, please click your class's button after page reload(since I cannot tell which class you are in)");
                         } else if (link == bre) {
