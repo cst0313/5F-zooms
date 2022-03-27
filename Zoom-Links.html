@@ -283,14 +283,37 @@
                                 link = fin;
                             }
                         }
-			if (date=="3-25"){
-				if(time>= "12:00" && time <="12:59"){
+			if (date == "3-25"){
+				if (time >= "12:00" && time <= "12:59") {
 					link = chem;
 				}
 				if (time >= "13:00" && time < "23:59") {
-                                	link = fin;
+					link = fin;
                             	}
 			}
+                        if (date == "3-28") {
+                            if (time >= "8:15" && time < "8:45") {
+                                link = math;
+                            }
+                            if (time >= "9:20" && time < "9:34") {
+                                link = bre;
+                            }
+                            if (time >= "9:35" && time < "10:30") {
+                                link = drive;
+                            }
+                            if (time >= "10:35" && time < "10:55") {
+                                link = drive;
+                            }
+                            if (time >= "11:10" && time < "11:20") {
+                                link = break;
+                            }
+                            if (time >= "11:20" && time < "11:59") {
+                                link = chem;
+                            }
+                            if (time >= "13:05" && time < "23:59") {
+                                link = fin;
+                            }
+                        }
                         if (link == fin) {
                             alert("Lessons are finished for today! Come back tomorrow");
                             link = drive;
