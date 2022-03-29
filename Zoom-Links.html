@@ -314,6 +314,29 @@
                                 link = fin;
                             }
                         }
+                       if (date == "3-29") {
+                            if (time >= "8:15" && time < "8:59") {
+                                link = math;
+                            }
+                            if (time >= "9:20" && time < "9:34") {
+                                link = bre;
+                            }
+                            if (time >= "9:35" && time < "9:59") {
+                                link = math;
+                            }
+                            if (time >= "10:30" && time < "10:55") {
+                                link = chem;
+                            }
+                            if (time >= "11:10" && time < "11:20") {
+                                link = bre;
+                            }
+                            if (time >= "11:25" && time < "11:59") {
+                                link = physics;
+                            }
+                            if (time >= "12:00" && time < "12:35") {
+                                link = physics;
+                            }
+                        }
                         if (link == fin) {
                             alert("Lessons are finished for today! Come back tomorrow");
                             link = drive;
