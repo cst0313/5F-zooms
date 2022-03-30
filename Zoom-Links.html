@@ -337,6 +337,14 @@
                                 link = physics;
                             }
                         }
+                       if (date == "3-30") {
+                            if (time >= "11:00" && time < "11:59") {
+                                link = fin;
+                            }
+                            if (time >= "12:00" && time < "99:99") {
+                                link = fin;
+                            }
+                        }
                         if (link == fin) {
                             alert("Lessons are finished for today! Come back tomorrow");
                             link = drive;
