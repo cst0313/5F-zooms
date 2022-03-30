@@ -163,6 +163,7 @@
                         var drive = "https://cst0313.github.io/5F-zooms/Zoom-Links.html";
                         var fin = "www.google.com";
 			var bio = "https://zoom.us/j/7145747220?pwd=dVVQVVY5dWhDdFJLdWlQRTNoWUZrUT09";
+			var announcement= "https://cst0313.github.io/5F-zooms/Home.html";
                         if (date == "3-16") {
                             alert("Lessons are up for today! Come back tomorrow~");
                             link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
@@ -345,6 +346,23 @@
                                 link = fin;
                             }
                         }
+                       if (date == "3-31") {
+                            if (time >= "8:15" && time < "8:59") {
+                                link = physics;
+                            }
+                            if (time >= "9:20" && time < "9:34") {
+                                link = bre;
+                            }
+                            if (time >= "9:35" && time < "9:59") {
+                                link = physics;
+                            }
+                            if (time >= "10:05" && time < "10:55") {
+                                link = bio;
+                            }
+                            if (time >= "11:10" && time < "99:99") {
+                                link = announcement;
+                            }
+                        }
                         if (link == fin) {
                             alert("Lessons are finished for today! Come back tomorrow");
                             link = drive;
@@ -368,6 +386,9 @@
                             if (link == bio) {
                                 alert("You are about to enter bio (Note there are no FM for FM ppl)");
                             }
+			    if (link == announcement) {
+				alert("Lessons are finished for today! Good luck in tomorrow's exam!);
+		            }
                         }
                         document.getElementById('hyperlink').setAttribute("href", link);
                         document.getElementById('hyperlink').innerHTML = "SMART ENTER";
